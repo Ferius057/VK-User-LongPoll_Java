@@ -36,7 +36,7 @@ public class LongPollJsonParser {
             JSONArray jsonArray = jsonObject.getJSONArray("updates");
             for (int i = 0; i < jsonArray.length(); i++) {
                 jsonArrayMessage = jsonArray.getJSONArray(i);
-                if (jsonArrayMessage.length() == 8) {
+                if (jsonArrayMessage.length() == 8 & jsonArrayMessage.toString().substring(1,2).equals("4")) {
                     System.out.println(messageParser.messageParser(jsonArrayMessage));
                     time(start);
                 }
